@@ -1,6 +1,10 @@
-FROM python:3.9.6-alpine
+FROM python:3.10.13-slim-bullseye
 
-RUN apk update && apk add gcc python3-dev musl-dev gdb && \
+WORKDIR /app
+
+COPY . /app
+
+RUN apt update && \
     pip install --upgrade pip && pip install -r requirements.txt
 
 CMD ["streamlit", "run", "main.py", "--server.port", "8501"]
