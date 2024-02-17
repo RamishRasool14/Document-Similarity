@@ -38,7 +38,7 @@ def main():
                         st.error("Unable to add to Weaviate. Please check connection.")
                 st.success(f"Embedding successful!\nSimilarity score: {calculate_similarity(body)}")
             elif status == 400:
-                st.error(body)
+                st.error(f"Hugging Face API Error: {body.get('error')}")
 
         st.subheader("Document 1:")
         st.text_area("Text Content", text[1], key='doc1')
