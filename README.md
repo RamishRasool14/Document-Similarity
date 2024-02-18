@@ -1,4 +1,5 @@
-# Document Similarity Checker
+![Photo](preview.png)
+
 
 ## Introduction
 
@@ -14,7 +15,7 @@ The Document Similarity Checker is a Python application that utilizes natural la
 
 2. Add your Hugging Face API key to docker compose HF_API_KEY environment variable. You can get the API key for free [here](https://huggingface.co/docs/api-inference/en/quicktour)
    ```shell
-   cp .env.example .env
+   echo "HF_API_KEY=your_api_key" > .env
    ```
 
 3. Docker:
